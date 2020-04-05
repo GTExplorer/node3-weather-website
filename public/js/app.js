@@ -1,6 +1,6 @@
 // CLIENT SIDE - shows result in the browser called from HTML page 
 
-console.log('client side java script loaded')
+//console.log('client side java script loaded')
 // fetch API - is not a part of javascript, its browser based API, can be used in all browsers, cantbe used in node js
 
 
