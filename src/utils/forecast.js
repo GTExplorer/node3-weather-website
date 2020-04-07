@@ -28,10 +28,14 @@ const forecast = (latitude, longitude, callback) => {
             //const forecast1 = body.daily.data[0].summary+' It is currently '+
             //body.currently.temperature+' degrees out. There is a '+
             //body.currently.precipProbability+'% chance of rain.'
+            //console.log(body.daily.data[0].temperatureLow)
             callback(undefined, {
                 forecast:   body.daily.data[0].summary+' It is currently '+
                             body.currently.temperature+' degrees out. There is a '+
-                            body.currently.precipProbability+'% chance of rain.'
+                            body.currently.precipProbability+'% chance of rain. ',
+                temphigh:   body.daily.data[0].temperatureHigh,
+                templow:    body.daily.data[0].temperatureLow
+                
                 //summary:        body.daily.data[0].summary,
                 //temperature:    body.currently.temperature,               
                 //percipitation:  body.currently.precipProbability

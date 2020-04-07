@@ -20,7 +20,6 @@ const messageTwo = document.querySelector('#message-2')
 
 
 
-
 weatherForm.addEventListener('submit', (event) => {
     event.preventDefault()
 
@@ -41,8 +40,11 @@ weatherForm.addEventListener('submit', (event) => {
             } else {
                 console.log('Location:',data.location)
                 console.log('Forecast:',data.forecast)
-                messageOne.textContent = 'Location: ' + data.location
-                messageTwo.textContent = 'Forecast: ' + data.forecast
+                console.log('temphigh:',data.temphigh)
+                messageOne.textContent = 'Location: '  + data.location
+                messageTwo.textContent = 'Forecast: '  + data.forecast + 
+                                        "\nHighTemp: " + data.temphigh +
+                                        ", LowTemp: "     + data.templow
             }
         })
     })

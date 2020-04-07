@@ -71,7 +71,7 @@ app.get('/weather', (req, res) => {
             })
         }
         // callback chaining
-        forecast(latitude,longitude, (error, {forecast,temperature}) => {   // temperature is not used
+        forecast(latitude,longitude, (error, {forecast,temperature,temphigh,templow}) => {   // temperature is not used
             if( error ) {
                 return res.send({
                     error: 'Weather data is not found:'
@@ -82,7 +82,9 @@ app.get('/weather', (req, res) => {
                 location:    location,
                 latitude:    latitude,
                 longitude:   longitude,
-                forecast:    forecast
+                forecast:    forecast,
+                temphigh:    temphigh,
+                templow:     templow
             })
         })
         console.log('\n')
